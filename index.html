@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <script type="text/javascript" src="media/jquery-1.8.min.js"></script>
+        <style type="text/css">
+        body {
+          font-family: arial;
+          font-size: 13px;
+        }
+         .information {
+         	display: none;
+         }
+         #wrapper {
+          width: 550px;
+          height: 430px;
+         }
+         #imagePlacement {
+          width: 550px;
+          margin-top: 5px;
+          height: 82px;
+         
+         }
+
+         .buttons {
+          width:300px;
+        height: 82px;
+         margin: 0 auto;
+         text-align: center;
+
+         }
+
+          .stressBtn {
+            margin-right: 5px;
+             margin-left:10px;
+             cursor: pointer;
+          }
+        </style>
+        <script type="text/javascript" charset="utf-8">
+        $(function(){
+        	$sel = {
+        		btn : $('.stressBtn'), 
+        		information: $('.information')
+        	}
+        	$sel.btn.click(function(){
+        		$sel.information.hide();
+        		$('#' + $(this).attr('number')).show();
+                  
+                  $sel.btn.each(function(){
+                this.src= this.src.replace("-over", "_off");
+              });
+                this.src= this.src.replace("_off", "-over");                  
+           });     
+
+     }); 
+
+        </script>
+    </head>
+    <body>
+     <div id="wrapper">
+  <div id ="imagePlacement">
+    <div class="buttons">
+       <img src="media/question_off.png" class="stressBtn" number = "1" />
+       <img src="media/question_off.png" class="stressBtn" number = "2" />
+       <img src="media/question_off.png" class="stressBtn" number = "3" />
+       <img src="media/question_off.png" class="stressBtn" number = "4" />
+     </div>  
+  </div>     
+       <div class="information" id="1">Between two and six years of age, children have magical thinking. They need an explanation of events. They must be told they did nothing to cause their brother or sister's illness. </div>
+       
+       <div class="information" id="2">Children greater than three are interested in babies. For those with a sibling in the NICU, seeing pictures of or looking through the window at their new brother or sister may be helpful. There are books specific to siblings about infants in the NICU. </div>
+       
+       <div class="information" id="3">Children less than four years of age may suffer separation anxiety as their parent's time and focus are on the sick sibling. </div>
+       
+       <div class="information" id="4">It is best that the child care for siblings left at home be provided by a familiar person in a familiar environment. </div>
+     </div> 
+    </body>
+</html>

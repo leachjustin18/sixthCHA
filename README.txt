@@ -1,0 +1,1 @@
+Listens to which icon you click on. It will show the related information and will make the icon you click activated.
